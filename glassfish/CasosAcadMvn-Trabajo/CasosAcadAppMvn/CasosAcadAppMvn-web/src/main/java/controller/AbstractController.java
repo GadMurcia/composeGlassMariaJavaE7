@@ -5,13 +5,11 @@
  */
 package controller;
 
-import java.io.Serializable;
-
 /**
  *
  * @author omar
  */
-public abstract class AbstractController<T> implements Serializable{
+public abstract class AbstractController<T> {
 //    private Class<T> controllerClass;
 //    
 //    public AbstractController(Class<T> controllerClass) {
