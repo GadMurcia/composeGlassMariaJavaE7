@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+        <cc:attribute name="idTipo" required="true"/>
+        <cc:attribute name="nombre" required="true"/>
+        <cc:attribute name="attActivo" required="true"/>
+        <cc:attribute name="attDescripcion" required="true"/>
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+                <h2><h:outputText value="Crear/Editar"/></h2>
+                <h:panelGrid columns="2" id="panelEdit">
+                    <h:outputLabel value="Id:" for="id"/>
+                    <h:inputText id="id" disabled="true" readonly="true" value="#{cc.attrs.idTipo}" title="Id" required="true"/>
+                    <h:outputLabel value="Nombre:" for="nombre"/>
+                    <h:inputText id="nombre" value="#{cc.attrs.nombre}" title="Nombre" required="false"/>
+                    <h:outputLabel value="Activo:" for="activo"/>
+                    <h:selectBooleanCheckbox id="activo" value="#{cc.attrs.attActivo}"  title="Activo" required="false"/>
+                    <h:outputLabel value="Descripcion:" for="descripcion"/>
+                    <h:inputTextarea id="descripcion" value="#{cc.attrs.attDescripcion}" title="Descripcion" required="false"/>
+                </h:panelGrid>
+    </cc:implementation>
+</html>

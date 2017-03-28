@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+   maria:
+      build:
+       context: ./mariadb
+       dockerfile: Dockerfile
+      environment:
+       MYSQL_ROOT_PASSWORD: murcia
+      volumes:
+       - $PWD/mariadb:/var/lib/mysql
+      
+
+   glass:
+      build:
+       context: ./glassfish
+       dockerfile: Dockerfile
+      links:
+       - maria
+      ports:
+       - '4848:4848/tcp'
+       - '8080:8080/tcp'
+       - '8181:8181/tcp'
+       - '9009:9009/tcp'
+    

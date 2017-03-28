@@ -1,0 +1,37 @@
+#
+# MariaDB Dockerfile
+#
+# https://github.com/dockerfile/mariadb
+#
+
+# Pull base image.
+FROM debian
+
+# Install MariaDB.
+RUN	rm /etc/apt/sources.list && mkdir /dd/
+COPY	nuevo/* /dd/ 
+RUN	cp /dd/sources.list /etc/apt/sources.list && chmod +x /dd/contra.sh 
+RUN	apt-get update && apt-get install -y python-software-properties  software-properties-common
+
+RUN \
+  apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db && \
+  add-apt-repository 'deb http://mariadb.biz.net.id//repo/10.1/debian jessie main' && \
+  apt-get update && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y mariadb-server && \
+  sed -i 's/^\(bind-address\s.*\)/# \1/' /etc/mysql/my.cnf
+
+RUN  sh /dd/contra.sh
+    
+
+
+# Define mountable directories.
+VOLUME ["/etc/mysql", "/var/lib/mysql"]
+
+# Define working directory.
+WORKDIR /data
+
+# Define default command.
+CMD ["mysqld_safe"]
+
+# Expose ports.
+EXPOSE 3306

@@ -1,0 +1,16 @@
+FROM	mariadb:latest
+ENV	MYSQL_ROOT_PASSWORD murcia
+# Define mountable directories.
+VOLUME ["/etc/mysql", "/var/lib/mysql"]
+
+# Define working directory.
+WORKDIR /data
+
+# Define default command.
+CMD ["/bin/bash", "mysqld_safe"]
+
+# Expose ports.
+EXPOSE 3304:3306
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+

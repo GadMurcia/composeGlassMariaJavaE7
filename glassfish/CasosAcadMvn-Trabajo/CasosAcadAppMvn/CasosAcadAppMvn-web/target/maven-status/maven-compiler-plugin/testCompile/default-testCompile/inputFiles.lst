@@ -1,0 +1,14 @@
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/CasoDetalleRequisitoAtestadoFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/CasoFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/CasoDetalleFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/ProcesoFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/ProcesoDetalleFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/CasoDetalleRequisitoFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/TipoPasoFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/PasoFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/TipoRequisitoFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/ApplicationConfig.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/PasoRequisitoFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/RequisitoFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/SolicitudFacadeREST.java
+/home/delsas/Documentos/docker/composeTPI/glassfish/CasosAcadMvn-Trabajo/CasosAcadAppMvn/CasosAcadAppMvn-web/src/test/java/service/AbstractFacade.java

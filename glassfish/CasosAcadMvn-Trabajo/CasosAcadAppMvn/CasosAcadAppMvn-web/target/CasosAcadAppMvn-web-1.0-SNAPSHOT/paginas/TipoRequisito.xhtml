@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:om="http://xmlns.jcp.org/jsf/composite/omarcp">
+    <h:head>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <title>Tipo Requisito</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </h:head>
+    <h:body>
+        <h2 align="center">Tipo Requisito</h2>
+        <h:panelGrid columns="2">
+            <h:form id="panelTablaPrincipal">
+                <h:dataTable width="90%"  var="tr" value="#{tipoRequisitoController.findAll()}" border="1" cellpadding="2" cellspacing="2">
+                    <h:column>
+                        <f:facet name="header">Id</f:facet>
+                        <h:outputText value="#{tr.idTipoRequisito}"></h:outputText>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Name</f:facet>
+                        <h:outputText value="#{tr.nombre}"></h:outputText>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Activo</f:facet>
+                        <h:outputText value="#{tr.activo}"></h:outputText>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Descripcion</f:facet>
+                        <h:outputText value="#{tr.descripcion}"></h:outputText>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Opcion</f:facet>
+                        <h:commandLink id="seleccc" value="Seleccionar" action="#{tipoRequisitoController.seleccionar(tr)}">
+                            <f:ajax execute=":seleccc" render=":editFrm"/>
+                        </h:commandLink>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+            <f:view>
+                <h:form id="editFrm">
+                    <om:frmTabla id="panelcrud" idTipo="#{tipoRequisitoController.tr.idTipoRequisito}" nombre="#{tipoRequisitoController.tr.nombre}" attActivo="#{tipoRequisitoController.tr.activo}" attDescripcion="#{tipoRequisitoController.tr.descripcion}"></om:frmTabla>
+                    <h:panelGrid columns="2" style="">
+                        <h:commandButton id="btnClear" value="Limpiar" action="#{tipoRequisitoController.limpiar()}">
+                            <f:ajax execute="@this" render=":editFrm"/>
+                        </h:commandButton>
+                        <om:btnsCrud id="btns" editando="#{tipoRequisitoController.editando}" addBtn="#{tipoRequisitoController.agregar}" editBtn="#{tipoRequisitoController.editar}" removeBtn="#{tipoRequisitoController.borrar}" ejecutar=":editFrm" renderizar=":editFrm :panelTablaPrincipal"/>
+                    </h:panelGrid>
+                </h:form>
+            </f:view>
+        </h:panelGrid>
+    </h:body>
+</html>

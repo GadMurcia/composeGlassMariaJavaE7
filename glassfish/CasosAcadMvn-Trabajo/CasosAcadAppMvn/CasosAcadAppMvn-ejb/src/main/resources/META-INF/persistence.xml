@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="casos.acad_CasosAcadAppMvn-ejb_ejb_1.0-SNAPSHOTPU" transaction-type="JTA">
+    <jta-data-source>jdbc/casosacad</jta-data-source>
+    <class>casos.acad.casosacaddatalibmvn.Caso</class>
+    <class>casos.acad.casosacaddatalibmvn.CasoDetalle</class>
+    <class>casos.acad.casosacaddatalibmvn.CasoDetalleRequisito</class>
+    <class>casos.acad.casosacaddatalibmvn.CasoDetalleRequisitoAtestado</class>
+    <class>casos.acad.casosacaddatalibmvn.Paso</class>
+    <class>casos.acad.casosacaddatalibmvn.PasoRequisito</class>
+    <class>casos.acad.casosacaddatalibmvn.Proceso</class>
+    <class>casos.acad.casosacaddatalibmvn.ProcesoDetalle</class>
+    <class>casos.acad.casosacaddatalibmvn.Requisito</class>
+    <class>casos.acad.casosacaddatalibmvn.Solicitud</class>
+    <class>casos.acad.casosacaddatalibmvn.TipoPaso</class>
+    <class>casos.acad.casosacaddatalibmvn.TipoRequisito</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties/>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,14 @@
+service/AbstractFacade.class
+service/ApplicationConfig.class
+service/CasoFacadeREST.class
+service/SolicitudFacadeREST.class
+service/ProcesoDetalleFacadeREST.class
+service/ProcesoFacadeREST.class
+service/PasoRequisitoFacadeREST.class
+service/CasoDetalleRequisitoAtestadoFacadeREST.class
+service/TipoRequisitoFacadeREST.class
+service/RequisitoFacadeREST.class
+service/TipoPasoFacadeREST.class
+service/CasoDetalleRequisitoFacadeREST.class
+service/CasoDetalleFacadeREST.class
+service/PasoFacadeREST.class
